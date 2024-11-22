@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/fonts/Roboto-Regular.woff2") format("woff2"),
+    url("/src/fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rules-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  display: inline-grid;
+  gap: 10px; 
+}
+
+
+.rules-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rules-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid black; 
+  border-radius: 10px; 
+  padding: 10px; 
+  background-color: #efc06e;
+}
+
+.rules-list {
+  width: 30%;
+  font-size:  1.125rem;
+  grid-area: catalog;
+  grid-area: rules;
+  border: 1px solid black; 
+  border-radius: 10px; 
+  padding: 10px; 
+  list-style-type: none;
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+}
+
+.rules-list li {
+  position: relative; 
+  padding-left: 20px; 
+}
+
+.rules-list li::before {
+  content: '•'; 
+  color: #1e1e1e; 
+  font-size: 20px; 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+}
+
+
+@media (max-width: 768px) {
+  .rules-container {
+    display: block;  
+    padding: 10px; 
+    
+  }
+
+  .rules-section {
+    display: block; 
+    padding: 0 10px;
+  }
+
+  .rules-title {
+    width: 100%;
+    font-size: 1.5rem; 
+    text-align: center;
+    margin-bottom: 10px; 
+  }
+
+  .rules-list {
+    width: 100%;
+    font-size: 1rem; 
+    padding-left: 20px;
+    margin-top: 0; 
+  }
+
+  .rules-list li {
+    padding-left: 15px; 
+  }
+}

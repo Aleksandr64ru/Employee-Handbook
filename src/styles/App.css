@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/src/fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("/src/fonts/BebasNeue-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
+  font-family: "BebasNeue", sans-serif;
+  background-color: #efc06e; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  padding: 12px 24px; 
+  font-size: 1.125rem; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+}
+
+.submit-button:hover {
+  background-color: #ffc45e; 
+}
+
+.submit-button:active {
+  background-color: #ffc45e; 
+}
+
+.submit-button:focus {
+  outline: none;
+}
