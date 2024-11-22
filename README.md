@@ -167,4 +167,4 @@ JSX структура:
 
 {bottomText && <p className="bottom-text">{bottomText}</p>} — если проп bottomText передан, то он будет отображен. Если проп не передан, то этот параграф не рендерится.
 
-cd  W:\PROJECT\Employee-Handbook\employee
+cd  W:\PROJECT\Employee-Handbook\employee# Employee-Handbook
