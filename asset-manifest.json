@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Employee-Handbook/static/css/main.9f10c164.css",
+    "main.js": "/Employee-Handbook/static/js/main.7bced481.js",
+    "static/media/Montserrat-Bold.woff": "/Employee-Handbook/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.woff",
+    "static/media/Montserrat-Bold.woff2": "/Employee-Handbook/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.woff2",
+    "static/media/Montserrat-Regular.woff": "/Employee-Handbook/static/media/Montserrat-Regular.24785cc015b27a3e964b.woff",
+    "static/media/Montserrat-Regular.woff2": "/Employee-Handbook/static/media/Montserrat-Regular.24785cc015b27a3e964b.woff2",
+    "static/media/Roboto-Regular.woff": "/Employee-Handbook/static/media/Roboto-Regular.27f62b53b93858475a7f.woff",
+    "static/media/Roboto-Regular.woff2": "/Employee-Handbook/static/media/Roboto-Regular.27f62b53b93858475a7f.woff2",
+    "static/media/BebasNeue-Regular.woff": "/Employee-Handbook/static/media/BebasNeue-Regular.12e3683f9192436a7be8.woff",
+    "static/media/BebasNeue-Regular.woff2": "/Employee-Handbook/static/media/BebasNeue-Regular.12e3683f9192436a7be8.woff2",
+    "index.html": "/Employee-Handbook/index.html",
+    "main.9f10c164.css.map": "/Employee-Handbook/static/css/main.9f10c164.css.map",
+    "main.7bced481.js.map": "/Employee-Handbook/static/js/main.7bced481.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f10c164.css",
+    "static/js/main.7bced481.js"
+  ]
+}
