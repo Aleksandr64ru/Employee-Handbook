@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Title from "./Title";
 import Rules from "./Rules";
 import CustomInput from "./CustomInput";
+import Theme from "./Theme";
 import "../styles/App.css";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <div className="content">
+      <Theme />
       <Title />
       <form onSubmit={handleSubmit} className="input-container">
         <CustomInput

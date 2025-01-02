@@ -1,0 +1,46 @@
+:root {
+    --background-light: #ffffff;
+    --background-dark: #121212;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --button-background-light: #6200ea;
+    --button-background-dark: #3700b3;
+    --rules-title-light: #efc06e;
+    --rules-title-dark: #302f2f;
+    --rules-list-light: #f9f9f9;
+    --rules-list-dark: #302f2f;
+    --focus-button-light: #e8a42f;
+    --focus-button-dark: #272626;
+  }
+  
+  [data-theme='light'] {
+    --background: var(--background-light);
+    --text: var(--text-light);
+    --button-background: var(--button-background-light);
+    --rules-list: var(--rules-list-light);
+    --rules-title: var(--rules-title-light);
+    --focus-button: var(--focus-button-light);
+  }
+  
+  [data-theme='dark'] {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --button-background: var(--button-background-dark);
+    --rules-list: var(--rules-list-dark);
+    --rules-title: var(--rules-title-dark);
+    --focus-button: var(--focus-button-dark);
+  }
+  
+  .theme-button {
+    background-color: var(--button-background);
+    color: var(--text);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+  }
+  
+  .theme-button:hover {
+    background-color: rgba(98, 0, 234, 0.8);
+  }

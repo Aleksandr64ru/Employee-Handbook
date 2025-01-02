@@ -1,8 +1,6 @@
 ## Документация по проекту "Правила работы с ТМЦ (Employee-Handbook)"
 
-Описание проекта:
-
-Проект "Правила работы с ТМЦ" представляет собой руководство для сотрудников розничной торговли электронной техникой, направленное на стандартизацию и улучшение процессов обращения с товарно-материальными ценностями (ТМЦ). Данный проект поможет сотрудникам разобраться в правильных методах работы с товаром, а также научит их следовать внутренним регламентам компании для предотвращения потерь, ошибок и нарушения правил хранения.
+-
 
 ## Интерфейс для десктопной версии приложения.
 ![Версия для десктопа](images/desktop.png)
@@ -199,4 +197,36 @@ JSX структура:
 <p> — параграф для отображения нижнего текста, если он передан через проп bottomText.
 ```
    
+## Компонент Theme
+
+Компонент Theme необходим для переключения темы приложения. Для хранения состояния темы используется хук useState, для загрузки темы используется useEffect.
+
+Пример кода:
+```bash
+const Theme = () => {
+  // Состояние для текущей темы
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  // Эффект для загрузки темы из localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setIsDarkTheme(true);
+    }
+  }, []);
+
+  // Эффект для применения темы
+  useEffect(() => {
+    if (isDarkTheme) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  }, [isDarkTheme]);
+```
+
+
+
 
