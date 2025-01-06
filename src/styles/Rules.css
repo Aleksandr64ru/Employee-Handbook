@@ -1,26 +1,32 @@
+/* Шрифты */
 @font-face {
   font-family: "Roboto";
   src: url("/src/fonts/Roboto-Regular.woff2") format("woff2"),
     url("/src/fonts/Roboto-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap; /* ускоряем загрузку шрифта */
 }
 
+/* Контейнер с правилами */
 .rules-container {
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  display: inline-grid;
-  gap: 10px; 
+  gap: 10px;
+  padding: 10px;
+  /* Убираем display: inline-grid, так как display: grid подходит */
 }
 
-
+/* Секции с правилами */
 .rules-section {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap; /* Подстраиваем содержимое для маленьких экранов */
 }
 
+/* Заголовок секции */
 .rules-title {
   display: flex;
   justify-content: center;
@@ -28,67 +34,118 @@
   width: 20%;
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
-  border: 1px solid black; 
-  border-radius: 10px; 
-  padding: 10px; 
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
   background-color: var(--rules-title);
+  text-align: center;
+  margin-bottom: 10px; /* Добавляем отступ снизу */
 }
 
+/* Список правил */
 .rules-list {
   width: 30%;
-  font-size:  1.125rem;
+  font-size: 1.125rem;
   grid-area: catalog;
   grid-area: rules;
-  border: 1px solid black; 
-  border-radius: 10px; 
-  padding: 10px; 
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
   list-style-type: none;
   margin: 0;
   background-color: var(--rules-list);
   font-family: "Roboto", sans-serif;
 }
 
+/* Стили для элементов списка */
 .rules-list li {
-  position: relative; 
-  padding-left: 20px; 
+  position: relative;
+  padding-left: 20px;
 }
 
 .rules-list li::before {
-  content: '•'; 
-  color: #1e1e1e; 
-  font-size: 20px; 
-  position: absolute; 
-  left: 0; 
-  top: 0; 
+  content: '•';
+  color: #1e1e1e;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-
-@media (max-width: 480px) {
+/* Адаптация для экранов с шириной до 768px */
+@media (max-width: 768px) {
   .rules-container {
-    display: block;  
-    padding: 10px; 
-    
+    display: block;
+    padding: 10px;
   }
 
   .rules-section {
-    display: block; 
+    display: block;
     padding: 0 15px;
   }
 
+  /* Заголовок секции */
   .rules-title {
     width: 100%;
-    font-size: 1.5rem; 
+    font-size: 1.75rem;
     text-align: center;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
 
+  /* Список правил */
   .rules-list {
     width: 100%;
-    font-size: 1rem; 
-    margin-top: 0; 
+    font-size: 1.125rem;
+    margin-top: 0;
   }
 
+  /* Элементы списка */
   .rules-list li {
-    padding-left: 15px; 
+    padding-left: 15px;
+  }
+
+  /* Подстройка для элементов внутри секции */
+  .rules-section {
+    flex-direction: column; /* Меняем на столбцы */
+    gap: 20px;  /* Увеличиваем пространство между элементами */
+  }
+}
+
+/* Адаптация для экранов с шириной до 480px */
+@media (max-width: 480px) {
+  .rules-container {
+    display: block;
+    padding: 10px;
+  }
+
+  .rules-section {
+    display: block;
+    padding: 0 15px;
+  }
+
+  /* Заголовок секции */
+  .rules-title {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* Список правил */
+  .rules-list {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  /* Элементы списка */
+  .rules-list li {
+    padding-left: 15px;
+  }
+
+  /* Подстройка для элементов внутри секции */
+  .rules-section {
+    flex-direction: column; /* Меняем на столбцы */
+    gap: 20px;  /* Увеличиваем пространство между элементами */
   }
 }

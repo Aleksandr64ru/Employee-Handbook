@@ -1,9 +1,11 @@
+/* Шрифты */
 @font-face {
   font-family: "Montserrat";
   src: url("/src/fonts/Montserrat-Bold.woff2") format("woff2"),
     url("/src/fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap; /* ускоряем загрузку шрифта */
 }
 
 @font-face {
@@ -12,21 +14,65 @@
     url("/src/fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap; /* ускоряем загрузку шрифта */
 }
 
+/* Стили для титула */
 .title {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-weight: 700;
+  font-size: 2.5rem;  /* стандартный размер для десктопа */
 }
 
-
+/* Заголовок */
 .header-title {
-  font-size: 3rem;
+  font-size: 3rem; /* заголовок для больших экранов */
 }
 
+/* Основной текст */
 .bottom-text {
   font-size: 1.2rem;
   padding: 0 10px;
 }
 
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+  /* Титул */
+  .title {
+    font-size: 1.8rem; /* уменьшаем размер шрифта */
+    padding: 0 15px;  /* добавляем отступы */
+  }
+
+  /* Заголовок */
+  .header-title {
+    font-size: 2.5rem;  /* уменьшаем размер заголовка */
+  }
+
+  /* Основной текст */
+  .bottom-text {
+    font-size: 1rem;  /* уменьшаем размер текста */
+    padding: 0 5px;   /* уменьшаем отступы для мобильных */
+  }
+
+  /* Дополнительное выравнивание для мобильных устройств */
+  .title, .header-title, .bottom-text {
+    text-align: center; /* выравниваем все элементы по центру */
+  }
+}
+
+/* Адаптация для очень маленьких экранов (например, для смартфонов) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem; /* ещё больше уменьшаем размер */
+  }
+
+  .header-title {
+    font-size: 2rem; /* меньше размер шрифта */
+  }
+
+  .bottom-text {
+    font-size: 0.9rem;  /* ещё меньше текст для удобства */
+    padding: 0 10px;    /* немного увеличиваем отступы */
+  }
+}
