@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Employee-Handbook/static/css/main.0163b836.css",
+    "main.css": "/Employee-Handbook/static/css/main.df88f68d.css",
     "main.js": "/Employee-Handbook/static/js/main.67c63780.js",
     "static/media/Montserrat-Bold.woff": "/Employee-Handbook/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.woff",
     "static/media/Montserrat-Bold.woff2": "/Employee-Handbook/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.woff2",
@@ -11,11 +11,11 @@
     "static/media/BebasNeue-Regular.woff": "/Employee-Handbook/static/media/BebasNeue-Regular.12e3683f9192436a7be8.woff",
     "static/media/BebasNeue-Regular.woff2": "/Employee-Handbook/static/media/BebasNeue-Regular.12e3683f9192436a7be8.woff2",
     "index.html": "/Employee-Handbook/index.html",
-    "main.0163b836.css.map": "/Employee-Handbook/static/css/main.0163b836.css.map",
+    "main.df88f68d.css.map": "/Employee-Handbook/static/css/main.df88f68d.css.map",
     "main.67c63780.js.map": "/Employee-Handbook/static/js/main.67c63780.js.map"
   },
   "entrypoints": [
-    "static/css/main.0163b836.css",
+    "static/css/main.df88f68d.css",
     "static/js/main.67c63780.js"
   ]
 }
