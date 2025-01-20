@@ -11,8 +11,7 @@ const Theme = () => {
       setIsDarkTheme(true);
     }
   }, []);
-
-  // Эффект для применения темы
+  
   useEffect(() => {
     if (isDarkTheme) {
       document.documentElement.setAttribute("data-theme", "dark");
