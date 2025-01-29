@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/Rules.css";
 
-const rulesData = [
+// Типизация структуры данных для правила
+interface RuleSection {
+  title: string;
+  items: string[];
+}
+
+// Массив данных с правилами
+const rulesData: RuleSection[] = [
   {
     title: "Будь аккуратен!",
     items: [
@@ -34,7 +41,8 @@ const rulesData = [
   },
 ];
 
-const Rules = () => {
+// Компонент Rules
+const Rules: React.FC = () => {
   return (
     <div>
       <main className="rules-container">

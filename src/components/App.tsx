@@ -5,15 +5,18 @@ import CustomInput from "./CustomInput";
 import Theme from "./Theme";
 import "../styles/App.css";
 
+// Типизация компонента App
 const App = () => {
-  const [inputValue, setInputValue] = useState("");
-  const helpText = "Имя и фамилия"; 
+  const [inputValue, setInputValue] = useState<string>(""); // Указываем, что inputValue — это строка
+  const helpText: string = "Имя и фамилия"; // helpText — строка
 
-  const handleChange = (event) => {
+  // Типизация события для изменения значения в input
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setInputValue(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  // Типизация события для отправки формы
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault(); // Чтобы форма не перезагружалась при отправке
     if (inputValue.trim()) {
       alert(`Отправлено: ${inputValue}`);
