@@ -4,7 +4,7 @@
 
 ## Стек технологий
 
-- **JavaScript**
+- **TypeScript**
 - **React**
 - **HTML**
 - **CSS**
