@@ -29,7 +29,7 @@ const Theme: React.FC = () => {
       <h3 className="theme-title">
         Тема переключена на: {isDarkTheme ? "Тёмную" : "Светлую"}
       </h3>
-      <button
+      <button 
         className="theme-button"
         onClick={() => setIsDarkTheme(!isDarkTheme)} // Типизация не требуется, так как это стандартный onClick
       >

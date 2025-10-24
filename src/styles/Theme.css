@@ -3,8 +3,8 @@
     --background-dark: #121212;
     --text-light: #000000;
     --text-dark: #ffffff;
-    --button-background-light: #6200ea;
-    --button-background-dark: #3700b3;
+    --button-background-light: #efc06e;
+    --button-background-dark: #302f2f;
     --rules-title-light: #efc06e;
     --rules-title-dark: #302f2f;
     --rules-list-light: #f9f9f9;
@@ -38,9 +38,9 @@
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color var(--transition-time);
+    transition: all 0.3s ease;
   }
   
   .theme-button:hover {
-    background-color: rgba(98, 0, 234, 0.8);
+    background-color: var(--focus-button);
   }
