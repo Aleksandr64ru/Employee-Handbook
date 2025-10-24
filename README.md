@@ -4,7 +4,7 @@
 
 ## Стек технологий
 
-- **JavaScript**
+- **TypeScript**
 - **React**
 - **HTML**
 - **CSS**
@@ -93,23 +93,17 @@ onFocus={handleFocus} — обработчик фокуса на поле вво
 onBlur={handleBlur} — обработчик потери фокуса на поле ввода.
 ```
 
-```bash
-PropTypes и DefaultProps:
-propTypes: Проверка типов для пропсов компонента:
-placeholder — строка (текст подсказки).
-value — строка (значение поля ввода).
-onChange — функция для обработки изменений ввода.
-defaultProps: Значение по умолчанию для пропса placeholder — "Фамилия и Имя", если этот проп не передан.
-```
-
 Пример использования компонента:
 
 ```bash
-<CustomInput
-  placeholder="Введите ваше имя"
-  value={inputValue}  // Значение из родительского компонента
-  onChange={handleChange}  // Обработчик изменений, переданный из родителя
-/>
+interface CustomInputProps {
+  placeholder?: string; // placeholder — строка, может быть необязательным
+  value: string; // value — строка (обязательное поле)
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void; // onChange — функция для обработки изменения значения input
+}
+
+const CustomInput: React.FC<CustomInputProps> = ({ placeholder = "Фамилия и Имя", value, onChange }) => {
+  const [inputPlaceholder, setInputPlaceholder] = useState<string>(placeholder);
 ```
 
 ## Компонент Rules:
@@ -222,9 +216,9 @@ JSX структура:
 
 Пример кода:
 ```bash
-const Theme = () => {
+const Theme: React.FC = () => {
   // Состояние для текущей темы
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false); // типизация как булево значение
 
   // Эффект для загрузки темы из localStorage
   useEffect(() => {
@@ -232,9 +226,9 @@ const Theme = () => {
     if (savedTheme === "dark") {
       setIsDarkTheme(true);
     }
-  }, []);
-
-  // Эффект для применения темы
+  }, []); // Пустой массив зависимостей, чтобы эффект сработал только при монтировании компонента
+  
+  // Эффект для сохранения выбранной темы в localStorage
   useEffect(() => {
     if (isDarkTheme) {
       document.documentElement.setAttribute("data-theme", "dark");
@@ -243,7 +237,7 @@ const Theme = () => {
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
     }
-  }, [isDarkTheme]);
+  }, [isDarkTheme]); // Этот эффект срабатывает каждый раз при изменении состояния isDarkTheme
 ```
 ## Заключение
 Этот проект предоставляет удобную памятку для сотрудников магазина, помогая обеспечить правильное обращение с товаром, который представляет материальную ценность. Система управления состоянием, современная верстка и поддержка адаптивного интерфейса делают приложение удобным как для десктопных, так и для мобильных устройств.
